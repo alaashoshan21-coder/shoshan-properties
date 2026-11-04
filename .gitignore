@@ -1,0 +1,23 @@
+# Dependencies and build output
+/node_modules/
+/.next/
+/shoshan-app/node_modules/
+/shoshan-app/.next/
+
+# Environment and secrets
+.env
+.env.*
+/shoshan-app/.env
+/shoshan-app/.env.*
+
+# Empty accidental files
+/[0-9]
+/[1-9][0-9]
+
+# Logs and system files
+*.log
+.DS_Store
+
+# Accidental root-level package files
+/package.json
+/package-lock.json
