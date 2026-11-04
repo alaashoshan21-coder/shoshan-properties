@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #14233f;
+
+  --navy: #102a56;
+  --navy-deep: #0b1e3b;
+  --royal-blue: #245fc5;
+  --royal-light: #eaf1ff;
+
+  --surface: #ffffff;
+  --surface-secondary: #f5f7fb;
+  --border: #e6eaf1;
+
+  --champagne: #c5a46d;
+  --muted: #77839a;
+
+  --radius-card: 16px;
+  --radius-button: 10px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #dce8ff;
+  color: var(--navy);
+}
+
+.container-main {
+  width: min(1440px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.surface-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.primary-button {
+  background: var(--navy);
+  color: #ffffff;
+  border-radius: var(--radius-button);
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  background: var(--royal-blue);
+}
+
+@media (max-width: 640px) {
+  .container-main {
+    width: calc(100% - 32px);
+  }
+}
